@@ -1,0 +1,11 @@
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.deps.json
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.runtimeconfig.json
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.runtimeconfig.dev.json
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.dll
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.pdb
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.csprojResolveAssemblyReference.cache
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.csproj.CoreCompileInputs.cache
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.AssemblyInfoInputs.cache
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.AssemblyInfo.cs
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.dll
+C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.pdb
