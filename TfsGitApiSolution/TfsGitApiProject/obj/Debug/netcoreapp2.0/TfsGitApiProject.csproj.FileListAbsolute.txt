@@ -9,3 +9,14 @@ C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcore
 C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.AssemblyInfo.cs
 C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.dll
 C:\Users\jchu1\source\repos\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.pdb
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.deps.json
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.runtimeconfig.json
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.runtimeconfig.dev.json
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.dll
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\bin\Debug\netcoreapp2.0\TfsGitApiProject.pdb
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.csprojResolveAssemblyReference.cache
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.csproj.CoreCompileInputs.cache
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.AssemblyInfoInputs.cache
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.AssemblyInfo.cs
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.dll
+C:\Projects\SideProjects\TfsGitApiSolution\TfsGitApiProject\obj\Debug\netcoreapp2.0\TfsGitApiProject.pdb

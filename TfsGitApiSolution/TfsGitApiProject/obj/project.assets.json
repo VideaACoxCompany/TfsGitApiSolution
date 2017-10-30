@@ -3574,11 +3574,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\jchu1\\source\\repos\\TfsGitApiSolution\\TfsGitApiProject\\TfsGitApiProject.csproj",
+      "projectUniqueName": "C:\\Projects\\SideProjects\\TfsGitApiSolution\\TfsGitApiProject\\TfsGitApiProject.csproj",
       "projectName": "TfsGitApiProject",
-      "projectPath": "C:\\Users\\jchu1\\source\\repos\\TfsGitApiSolution\\TfsGitApiProject\\TfsGitApiProject.csproj",
+      "projectPath": "C:\\Projects\\SideProjects\\TfsGitApiSolution\\TfsGitApiProject\\TfsGitApiProject.csproj",
       "packagesPath": "C:\\Users\\jchu1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jchu1\\source\\repos\\TfsGitApiSolution\\TfsGitApiProject\\obj\\",
+      "outputPath": "C:\\Projects\\SideProjects\\TfsGitApiSolution\\TfsGitApiProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

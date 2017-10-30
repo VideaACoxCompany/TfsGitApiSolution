@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using TfsGitApiProject.Entities;
 
-namespace ConsoleApp1
+namespace TfsGitApiProject
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -36,7 +39,14 @@ namespace ConsoleApp1
                     {
                         response.EnsureSuccessStatusCode();
                         string responseBody = await response.Content.ReadAsStringAsync();
-                        Console.WriteLine(responseBody);
+
+                        var result = JsonConvert.DeserializeObject<Project>(responseBody);
+
+                        
+                        result.Value.ForEach(i => Console.WriteLine(i.Name));
+                        //Console.WriteLine($"Projects:  {string.Join(",", result.Value.Select(i => i.Name))}");
+
+                        //Console.WriteLine(responseBody);
                     }
                 }
             }
