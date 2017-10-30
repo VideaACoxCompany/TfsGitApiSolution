@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using TfsGitApiProject.Entities;
+using TfsGitApiProject.Services;
 
 namespace TfsGitApiProject
 {
@@ -12,7 +13,6 @@ namespace TfsGitApiProject
         static void Main(string[] args)
         {
             GetProjects();
-            Console.WriteLine("Hello World!");
             Console.Read();
         }
 
@@ -22,33 +22,10 @@ namespace TfsGitApiProject
         {
             try
             {
-                var personalaccesstoken = "4lck6b2fcjnfrddl5tpiru356xbkb2chgo4du4nirhor4fxmmqka";
+                ProjectService projectService = new ProjectService();
+                var result = await projectService.GetResult();
+                result.Value.ForEach(i => Console.WriteLine(i.Name));
 
-                using (HttpClient client = new HttpClient())
-                {
-                    client.DefaultRequestHeaders.Accept.Add(
-                        new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
-                        Convert.ToBase64String(
-                            System.Text.ASCIIEncoding.ASCII.GetBytes(
-                                string.Format("{0}:{1}", "", personalaccesstoken))));
-
-                    using (HttpResponseMessage response = client.GetAsync(
-                        "https://tfs.videa.tv/tfs/Videa/_apis/projects").Result)
-                    {
-                        response.EnsureSuccessStatusCode();
-                        string responseBody = await response.Content.ReadAsStringAsync();
-
-                        var result = JsonConvert.DeserializeObject<Project>(responseBody);
-
-                        
-                        result.Value.ForEach(i => Console.WriteLine(i.Name));
-                        //Console.WriteLine($"Projects:  {string.Join(",", result.Value.Select(i => i.Name))}");
-
-                        //Console.WriteLine(responseBody);
-                    }
-                }
             }
             catch (Exception ex)
             {
