@@ -23,15 +23,20 @@ namespace TfsGitApiProject
         {
             try
             {
-                ProjectService projectService = new ProjectService();
-                var projects = await projectService.GetResult();
-                projects.Value.ForEach(i => Console.WriteLine(i.Name));
+                //ProjectService projectService = new ProjectService();
+                //var projects = await projectService.GetResult();
+                //projects.Value.ForEach(i => Console.WriteLine(i.Name));
 
-                RepoService repoService = new RepoService();
-                var repos = await repoService.GetResult();
-                repos.Value.ForEach(i => Console.WriteLine(i.Name + " " + i.Id));
+                //RepoService repoService = new RepoService();
+                //var repos = await repoService.GetResult();
+                //repos.Value.ForEach(i => Console.WriteLine(i.Name + " " + i.Id));
 
-                var repoId = repoService.FindId("avail-gateway-svc");
+                //var repoId = repoService.FindId("avail-gateway-svc");
+
+                var gitStatService = new GitStatsService();
+                var gitStat = await gitStatService.GetResult();
+                gitStat.Value.ForEach(i => Console.WriteLine($"{i.Name} ahead {i.AheadCount} behind {i.BehindCount}"));
+
 
             }
             catch (Exception ex)

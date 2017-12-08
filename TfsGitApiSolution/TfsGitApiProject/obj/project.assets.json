@@ -3592,6 +3592,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.videa.int:8080/NuGet/main": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
