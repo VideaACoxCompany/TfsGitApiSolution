@@ -21,5 +21,17 @@ namespace TfsGitApiProject.Services
             var repos =  GetResult().Result;
             return repos.Value.First(i => i.Name == repoName).Id;
         }
+
+        public IEnumerable<string> FindIds(IEnumerable<string> repoNames)
+        {
+            var repos = GetResult().Result;
+            return repos.Value.Where(i => repoNames.Contains(i.Name)).Select(i => i.Id);
+        }
+
+        public Dictionary<string, string> FindNameAndIds(IEnumerable<string> repoNames)
+        {
+            var repos = GetResult().Result;
+            return repos.Value.Where(i => repoNames.Contains(i.Name)).ToList().ToDictionary(i => i.Id, i => i.Name);
+        }
     }
 }
