@@ -26,11 +26,14 @@ namespace TfsGitApiProject
         {
             try
             {
+                //Display all projects
                 //ProjectService projectService = new ProjectService();
                 //var projects = await projectService.GetResult();
                 //projects.Value.ForEach(i => Console.WriteLine(i.Name));
 
                 RepoService repoService = new RepoService();
+
+                //Dispaly all repos
                 //var repos = await repoService.GetResult();
                 //repos.Value.ForEach(i => Console.WriteLine(i.Name + " " + i.Id));
 
@@ -49,12 +52,12 @@ namespace TfsGitApiProject
                 var repos = repoService.FindNameAndIds(repoNameList);
 
                 var gitStatService = new GitStatsService();
-                var branchesImInterested = new[] {"dev", "release-93"};
+                var branchesInterested = new[] {"dev", "release-93"};
 
                 foreach (var repo in repos)
                 {
                     var gitStat = await gitStatService.GetResult(repo.Key);
-                    gitStat.Value.Where(i => branchesImInterested.Contains(i.Name)).ToList().ForEach(i =>
+                    gitStat.Value.Where(i => branchesInterested.Contains(i.Name)).ToList().ForEach(i =>
                         Console.WriteLine($"Repo: {repo.Value.PadRight(20)} Branch {i.Name.PadRight(20)} is {i.BehindCount.PadRight(5)} commit(s) behind master branch"));
 
                 }
