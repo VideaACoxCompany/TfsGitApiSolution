@@ -19,7 +19,7 @@ namespace TfsGitApiProject
             var emailer = new SmtpService();
             emailer.SendEmail(result);
             Console.WriteLine("Success!");
-            Console.Read();
+            //Console.Read();
         }
 
 
@@ -66,7 +66,7 @@ namespace TfsGitApiProject
                     gitStat.Value.Where(i => branchesInterested.Contains(i.Name)).ToList().ForEach(i =>
                         //Console.WriteLine($"Repo: {repo.Value.PadRight(20)} Branch {i.Name.PadRight(20)} is {i.BehindCount.PadRight(5)} commit(s) behind master branch"));
                             result.AppendLine(
-                                $"Repo: {repo.Value.PadRight(50)} Branch {i.Name.PadRight(20)} is {i.BehindCount.PadRight(5)} commit(s) behind master branch"));
+                                $"Repo: {repo.Value, -50} Branch {i.Name} is {i.BehindCount} commit(s) behind master branch"));
 
                 }
                 return result.ToString();
