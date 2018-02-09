@@ -15,7 +15,11 @@ namespace TfsGitApiProject
         static void Main(string[] args)
         {
 
-            var result = GetPullRequests();
+            //GetWorkItems
+            var result = GetWorkItems();
+
+            //Get Pull Requests
+            //var result = GetPullRequests();
 
 
             //var result = GetResults().Result;
@@ -24,6 +28,13 @@ namespace TfsGitApiProject
             //emailer.SendEmail(result);
             Console.WriteLine("Success!");
             //Console.Read();
+        }
+
+        public static Task GetWorkItems()
+        {
+            var workItemService = new WorkItemService();
+            var result = workItemService.GetResult();
+            return Task.FromResult(0);
         }
 
         public static Task GetPullRequests()
