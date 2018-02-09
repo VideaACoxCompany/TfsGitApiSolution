@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,23 @@ namespace TfsGitApiProject
         static void Main(string[] args)
         {
 
-            var result = GetResults().Result;
+            var result = GetPullRequests();
 
-            var emailer = new SmtpService();
-            emailer.SendEmail(result);
+
+            //var result = GetResults().Result;
+
+            //var emailer = new SmtpService();
+            //emailer.SendEmail(result);
             Console.WriteLine("Success!");
             //Console.Read();
         }
 
-
+        public static Task GetPullRequests()
+        {
+            var prService = new PullRequestService();
+            var result = prService.GetResult();
+            return Task.FromResult(0);
+        }
 
         public static async Task<string> GetResults()
         {
@@ -54,7 +63,7 @@ namespace TfsGitApiProject
                 var repos = repoService.FindNameAndIds(repoNameList);
 
                 var gitStatService = new GitStatsService();
-                var branchesInterested = new[] {"dev", "release-93"};
+                var branchesInterested = new[] {"dev", "release"};
 
 
                 var result = new StringBuilder();
