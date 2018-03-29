@@ -16,13 +16,13 @@ namespace TfsGitApiProject
         {
 
             //GetWorkItems
-            var result = GetWorkItems();
+            //var result = GetWorkItems();
 
             //Get Pull Requests
             //var result = GetPullRequests();
 
-
-            //var result = GetResults().Result;
+            //branches
+            var result = GetResults().Result;
 
             //var emailer = new SmtpService();
             //emailer.SendEmail(result);
@@ -74,19 +74,23 @@ namespace TfsGitApiProject
                 var repos = repoService.FindNameAndIds(repoNameList);
 
                 var gitStatService = new GitStatsService();
-                var branchesInterested = new[] {"dev", "release"};
+                var devReleaseBranches = new[] {"dev", "release"};
 
 
                 var result = new StringBuilder();
-
+                foreach (var repo in repos)
+                {
+                    result.AppendLine($"{repo.Key}  {repo.Value}");
+                }
 
                 foreach (var repo in repos)
                 {
                     var gitStat = await gitStatService.GetResult(repo.Key);
-                    gitStat.Value.Where(i => branchesInterested.Contains(i.Name)).ToList().ForEach(i =>
-                        //Console.WriteLine($"Repo: {repo.Value.PadRight(20)} Branch {i.Name.PadRight(20)} is {i.BehindCount.PadRight(5)} commit(s) behind master branch"));
-                            result.AppendLine(
-                                $"Repo: {repo.Value, -50} Branch {i.Name} is {i.BehindCount} commit(s) behind master branch"));
+                    var devReleaseBranchesStat = gitStat.Value.Where(i => devReleaseBranches.Contains(i.Name)).ToList();
+
+                    devReleaseBranchesStat.ForEach(i =>
+                        result.AppendLine(
+                            $"Repo: {repo.Value} Branch {i.Name} is {i.BehindCount} commit(s) behind and {i.AheadCount} commit(s) ahead master branch"));
 
                 }
                 return result.ToString();

@@ -31,7 +31,7 @@ namespace TfsGitApiProject.Services
         public Dictionary<string, string> FindNameAndIds(IEnumerable<string> repoNames)
         {
             var repos = GetResult().Result;
-            return repos.Value.Where(i => repoNames.Contains(i.Name)).ToList().ToDictionary(i => i.Id, i => i.Name);
+            return repos.Value.Where(i => repoNames.Contains(i.Name) && i.Project.Name == "Videa Git").ToList().ToDictionary(i => i.Id, i => i.Name);
         }
     }
 }
